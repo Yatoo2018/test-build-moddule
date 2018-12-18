@@ -39,9 +39,9 @@ module.exports = {
       {
         test: /\.js$/,
         loader: 'babel-loader',
-        // exclude: /node_modules\/(?!(dom7|ssr-window|swiper)\/).*/,
+        //exclude: /node_modules\/(?!(dom7|ssr-window|swiper)\/).*/,
+        include: [resolve('src'), resolve('test'),resolve('node_modules/webpack-dev-server/client'),resolve('node_modules')]
         // include: [resolve('src'), resolve('test'),resolve('node_modules/webpack-dev-server/client'),resolve('node_modules/swiper'),resolve('node_modules/dom7'),resolve('node_modules/ssr-window')]
-        include: [resolve('node_modules')]
       },
       {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
